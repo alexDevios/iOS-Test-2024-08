@@ -16,5 +16,6 @@ class DummyInteractor {
 extension DummyInteractor: DummyBusinessLogic {
   func load(request: DummyModels.Load.Request) {
     presenter?.present(response: .init())
+      Services.appReviewService.startReviewFlow()
   }
 }
